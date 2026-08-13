@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metamed · Case study · Ghazala Baraki</title>
+<meta name="description" content="A clinic running on paper and WhatsApp, consolidated into one owned platform across 3 milestones and 18 sprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case.css">
+<link rel="stylesheet" href="motion.css">
+</head>
+<body>
+
+<nav><div class="wrap"><a href="index.html" class="mark"><img class="mark-av" src="avatar.png" alt="">Ghazala Baraki</a><a href="index.html#work" class="back">← All work</a></div></nav>
+
+<header>
+  <div class="wrap">
+    <p class="crumb rv">Case 02 · Digital health · Canada</p>
+    <h1 class="rv">A clinic that ran on paper and WhatsApp</h1>
+    <p class="sub rv">Metamed is a physician-led metabolic health practice. Patient records, appointments, body composition data and every conversation lived in different places. They didn't want another tool. They wanted one product they owned.</p>
+    <div class="tags rv">
+      <span class="tag">Platform consolidation</span><span class="tag">Subscription &amp; payments</span>
+      <span class="tag">Regulatory release</span><span class="tag">Third party integration</span><span class="tag">Cross functional delivery</span>
+    </div>
+    <div class="facts rv">
+      <div><p class="fk">Role</p><p class="fv">Product &amp; Project Manager</p></div>
+      <div><p class="fk">Duration</p><p class="fv">18 sprints, 3 milestones</p></div>
+      <div><p class="fk">Surfaces</p><p class="fv">Patient app, clinician dashboard, API</p></div>
+      <div><p class="fk">Scope</p><p class="fv">32 epics</p></div>
+    </div>
+    <img class="hero-img rv" src="metamed-dashboard.jpg" alt="Metamed clinician dashboard: patient counts, revenue, upcoming sessions, approval requests, inbound leads and patient progress tracking">
+  </div>
+</header>
+
+<section>
+  <div class="wrap narrow">
+    <p class="snum rv">01</p>
+    <h2 class="rv">It started when</h2>
+    <p class="lead rv">A clinician said, in effect: <span class="hl">everything is on paper and WhatsApp, and I can't see how my patients are actually doing.</span></p>
+    <p class="rv">That single sentence contained the whole problem. New patients filled in six pages of paper history that somebody then re-keyed. Conversations happened over WhatsApp, which meant they were scattered across personal phones and impossible to review. Body composition scans lived in the machine that produced them. Appointments lived somewhere else again.</p>
+    <p class="rv">Nobody could see a patient's whole journey in one place, least of all the clinicians responsible for it. Every hour spent reconciling systems was an hour not spent on care, and the practice couldn't grow past the limits of manual work.</p>
+    <p class="rv">The brief was consolidation. Not a new point solution to add to the pile, but one platform the practice owned, with the tools they already trusted pulled inside it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <p class="snum rv">02</p>
+    <h2 class="rv">What I owned</h2>
+    <p class="rv">I ran this end to end: discovery through release, with a cross functional team across engineering, design and technical leadership. Ceremonies, backlog, quality validation and client reporting were mine.</p>
+    <ul class="rv">
+      <li>Turned an open ended frustration into a defined scope: 32 epics, sequenced into 3 milestones, each one solving a complete workflow rather than scattering half features across all of them</li>
+      <li>Integrated what the practice already depended on rather than replacing it, so nobody had to relearn their own clinic</li>
+      <li>Owned the signup to payment flow: plan selection, consent capture, and payment at onboarding, with plans defining duration, schedule and included appointments</li>
+      <li>Defined the clinician side around the real care team, which set the permissions model for who reads and writes what</li>
+      <li>Prioritised secure patient to care team messaging with attachments, unread counts and notification behaviour, the details that decide whether a clinic adopts a chat feature or ignores it</li>
+      <li>Owned app store release as a regulated health product: classification, content rating, and the data safety declaration across every field the product collects</li>
+      <li>Ran QA and release readiness gates, validated with external testers before client handoff</li>
+    </ul>
+
+    <div class="mile">
+      <div class="mcard rv"><p class="mnum">MILESTONE 1</p><h3>Access and onboarding</h3><p>Secure login, digital intake forms replacing paper, in app messaging, and a basic clinician dashboard.</p></div>
+      <div class="mcard rv"><p class="mnum">MILESTONE 2</p><h3>Progress and plans</h3><p>Body composition data pulled in automatically, a progress dashboard, and care plans clinicians could assign from templates.</p></div>
+      <div class="mcard rv"><p class="mnum">MILESTONE 3</p><h3>Launch readiness</h3><p>Appointment management, direct access to the care team, end to end QA, and deployment.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <p class="snum rv">03</p>
+    <h2 class="rv">Decisions and trade-offs</h2>
+    <p class="rv">Every one of these cost something. That's what makes them decisions rather than preferences.</p>
+
+    <div class="dec rv">
+      <h3>Take payment through Stripe, not in app purchase</h3>
+      <div class="dl">
+        <span class="dt">The call</span><span>Process plan payments through Stripe at signup, and document that classification for app review before submitting.</span>
+        <span class="dt">Why</span><span>Metamed sells real world clinical care: physician supervision, scheduled appointments, a multi month programme. Platform guidelines place services delivered outside the app, including medical consultations, outside in app purchase. Getting the classification right wasn't a preference, it was the condition of being approved at all.</span>
+        <span class="dt">What it took</span><span>Mapping the payment model to the right policy category, preparing a reviewer facing explanation, and providing a review path that completed signup without a live payment.</span>
+        <span class="dt">Traded away</span><span>The convenience of the platform payment sheet, and ownership of subscription mechanics, refunds and payment method changes.</span>
+      </div>
+    </div>
+
+    <div class="dec rv">
+      <h3>Let existing patients move across without paying twice</h3>
+      <div class="dl">
+        <span class="dt">The call</span><span>A full discount onboarding path for patients already paying the clinic through its previous platform.</span>
+        <span class="dt">Why</span><span>The whole thesis was consolidation. If migrating meant being charged a second time for care they had already bought, patients wouldn't move, and the platform would launch empty.</span>
+        <span class="dt">Traded away</span><span>An extra step in onboarding, and a discount path that has to be controlled carefully.</span>
+      </div>
+    </div>
+
+    <div class="dec rv">
+      <h3>Ship access and onboarding before anything clinical</h3>
+      <div class="dl">
+        <span class="dt">The call</span><span>Milestone 1 carried login, registration, digital intake and a basic dashboard. Progress tracking and care plans waited.</span>
+        <span class="dt">Why</span><span>Paper was the pain the clinic could feel every single day. Solving it first meant they experienced the product working before the harder clinical features arrived, which bought trust for the rest of the build.</span>
+        <span class="dt">Traded away</span><span>Real time chat sat in the same milestone and the client wanted it, but at eight points it would have consumed the first sprint and it needed accounts to exist first. It shipped in the sprint after.</span>
+      </div>
+    </div>
+
+    <div class="dec rv">
+      <h3>Integrate the practice's tools rather than rebuild them</h3>
+      <div class="dl">
+        <span class="dt">The call</span><span>Wire in the body composition system, payments, messaging and verification services rather than building equivalents.</span>
+        <span class="dt">Why</span><span>The clinicians already trusted this data. Consolidation meant unifying what they used, not replacing it and asking them to relearn their practice.</span>
+        <span class="dt">Traded away</span><span>Dependency on systems outside the team's control, and an integration surface that grows with every tool added.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <p class="snum rv">04</p>
+    <h2 class="rv">Results</h2>
+    <div class="res rv">
+      <div><p class="rn" data-to="18">0</p><p class="rl">sprints to MVP</p></div>
+      <div><p class="rn" data-to="3">0</p><p class="rl">milestones, each a whole workflow</p></div>
+      <div><p class="rn" data-to="32">0</p><p class="rl">epics scoped and sequenced</p></div>
+      <div><p class="rn" data-to="3">0</p><p class="rl">surfaces delivered</p></div>
+    </div>
+    <p class="rv" style="margin-top:26px">A practice running on paper, WhatsApp and disconnected systems now runs on one platform it owns, cleared through app review as a regulated health product handling payments and health data.</p>
+    <p class="note rv">Metamed was at MVP stage, validated with 10 to 15 external testers before client handoff. These are delivery outcomes, not adoption numbers, and I'd rather say so than dress them up.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <p class="snum rv">05</p>
+    <h2 class="rv">What I'd do differently</h2>
+    <p class="lead rv">Close the scope at the start, and <span class="hl">stop entertaining scope creep.</span></p>
+    <p class="rv">I let scope stay open. Every new idea got a hearing, and a hearing is already a cost: it moves sequencing, reopens settled decisions, and turns a defined milestone into a negotiation. Milestone one shipped, but slower than it needed to, because the boundary around it kept moving.</p>
+    <div class="dec rv">
+      <h3>What I'd change</h3>
+      <div class="dl">
+        <span class="dt">Next time</span><span>Agree the scope of each milestone in writing, then close it. New requests go to the next milestone by default, not into a discussion about whether this one can absorb them.</span>
+        <span class="dt">Why it works</span><span>"Not now" is a far easier answer than "no", and it only exists if there is a written next milestone to put things in. Without one, every request becomes a decision about the current sprint.</span>
+        <span class="dt">The honest part</span><span>Saying yes felt like service. It wasn't. A client whose scope keeps growing is a client whose date keeps moving, and they feel that far more than they feel any individual feature they asked for.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="nextnav">
+  <div class="wrap">
+    <a class="nx rv" href="case-fmcv.html">
+      <span><p class="nxl">Next case</p><p class="nxt">FMCV VRS</p></span>
+      <span class="nxt">→</span>
+    </a>
+  </div>
+</div>
+
+<div class="cur" id="cur"></div><div class="curdot" id="curdot"></div>
+
+<script src="case.js"></script>
+<script src="motion.js"></script>
+</body>
+</html>
