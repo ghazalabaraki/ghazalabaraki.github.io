@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Air Force Shield · Case study · Ghazala Baraki</title>
+<meta name="description" content="An HVAC business owner who couldn't be on every site. Four client goals delivered as one product in 8 sprints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case.css">
+<link rel="stylesheet" href="motion.css">
+</head>
+<body>
+
+<nav><div class="wrap"><a href="index.html" class="mark"><img class="mark-av" src="avatar.png" alt="">Ghazala Baraki</a><a href="index.html#work" class="back">← All work</a></div></nav>
+
+<header>
+  <div class="wrap">
+    <p class="crumb rv">Case 01 · Commercial HVAC · Canada</p>
+    <h1 class="rv">The owner who couldn't be on every roof</h1>
+    <p class="sub rv">Technicians working alone across sixteen service sectors. No way to know a job was done properly until something went wrong. Four client goals, delivered as one product in 8 sprints.</p>
+    <div class="tags rv">
+      <span class="tag">AI product</span><span class="tag">0 to 1 MVP</span><span class="tag">Field operations</span>
+      <span class="tag">Third party integration</span><span class="tag">Web &amp; mobile</span>
+    </div>
+    <div class="facts rv">
+      <div><p class="fk">Role</p><p class="fv">Founding Product &amp; Project Manager</p></div>
+      <div><p class="fk">Duration</p><p class="fv">8 sprints, 2 months</p></div>
+      <div><p class="fk">Surfaces</p><p class="fv">Technician mobile, admin portal, API</p></div>
+      <div><p class="fk">Cycle</p><p class="fv">6 week client window</p></div>
+    </div>
+    <img class="hero-img rv" src="shield-jobtracking.jpg" alt="Technician job tracking view: active shift, check-in and check-out times per job, live duration and status">
+  </div>
+</header>
+
+<section>
+  <div class="wrap narrow">
+    <p class="snum rv">01</p>
+    <h2 class="rv">It started when</h2>
+    <p class="lead rv">The owner of a commercial HVAC business <span class="hl">couldn't be everywhere his technicians were.</span></p>
+    <p class="rv">His people worked alone, on rooftops and in mechanical rooms across sixteen service sectors. He had no way of knowing whether a job was being done properly until something went wrong, and by then it was a callback, a warranty claim, or a lost client. Training material existed as videos nobody had time to watch. Scheduling and dispatch lived in ServiceMonster, a system that didn't talk to anything a technician carried into the field.</p>
+    <p class="rv">He didn't ask for surveillance. He asked for visibility: a way to supervise quality without standing on site.</p>
+    <p class="rv">The brief came in four parts.</p>
+    <div class="mile">
+      <div class="mcard rv"><p class="mnum">GOAL 01</p><h3>A chatbot on their own data</h3><p>Not a general purpose assistant. One that answers from the company's own training material and procedures.</p></div>
+      <div class="mcard rv"><p class="mnum">GOAL 02</p><h3>One unified application</h3><p>All of it in a single place, rather than another tool added to the stack.</p></div>
+      <div class="mcard rv"><p class="mnum">GOAL 03</p><h3>Shield Academy</h3><p>Structured training the business could assign and track.</p></div>
+      <div class="mcard rv"><p class="mnum">GOAL 04</p><h3>Job tracking</h3><p>Visibility into work as it happened, in the field.</p></div>
+    </div>
+    <p class="rv" style="margin-top:34px">Underneath those four asks, three things were actually broken.</p>
+    <ul class="rv">
+      <li>One person was the company's 24/7 help desk. Every technician question, every training request, routed through a single individual, which meant the business could not grow faster than one person's availability</li>
+      <li>The knowledge existed but was scattered: screen recordings, unstructured documents, and whatever managers happened to carry in their heads</li>
+      <li>Nothing was measured. No record of who had been trained, how technicians were performing, or whether procedures were being followed</li>
+    </ul>
+    <p class="rv">That is the difference between a feature request and a problem statement. The client asked for a chatbot. What they needed was for expertise to stop living in one person and start living in a system.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <p class="snum rv">02</p>
+    <h2 class="rv">The idea that made it work</h2>
+    <p class="lead rv">The checklist wasn't a feature. It was the instrument.</p>
+    <p class="rv">Breaking every job into discrete, verifiable steps meant the technician got guidance and the owner got remote visibility from the same interaction. One mechanism, two problems solved. A technician working through a checklist isn't being monitored, they're being supported, and the supervision comes free as a by-product of the support.</p>
+    <p class="rv">That framing also solved the hardest part of the scope. Four goals delivered as four modules would have been a much easier build. Delivering them as one product meant the assistant, the academy and job tracking all had to share a single model of what a technician, a job, and a piece of training content are.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <p class="snum rv">03</p>
+    <h2 class="rv">What I owned</h2>
+    <ul class="rv">
+      <li>Product end to end: discovery, scope, roadmap, backlog and release sequencing across three surfaces delivered in parallel</li>
+      <li>Translated a four part brief into one coherent product rather than four bolted together modules</li>
+      <li>Structured the job workflow as step by step checklists tied to shift check in, so quality assurance and remote supervision came from the same flow the technician was already in</li>
+      <li>Scoped the training content pipeline around where the client's material already lived, so nobody had to migrate content before seeing value</li>
+      <li>Specified what the pipeline generates automatically from that content: summaries, checklists, quizzes, reading material and assessments, each replacing something a supervisor previously made by hand</li>
+      <li>Managed the ServiceMonster integration as a dependency with its own risk profile: weekly job synchronisation, admin calendar and dispatch views, sixteen sector route lookup, truck management</li>
+      <li>Defined roles and permissions for Shield Academy: hierarchical courses, role based assignment, progress tracking, and admin regeneration when source material changed</li>
+      <li>Ran QA and release readiness gates before anything reached the client</li>
+      <li>Owned client communication kickoff to post launch: pre milestone check ins, written weekly updates, scope changes negotiated in writing at decision maker level</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <p class="snum rv">04</p>
+    <h2 class="rv">Decisions and trade-offs</h2>
+
+    <div class="dec rv">
+      <h3>Build the academy before the assistant</h3>
+      <div class="dl">
+        <span class="dt">The call</span><span>Shipped in this order: Shield Academy, then ShieldBot, then job tracking and checklists, then the ServiceMonster integration.</span>
+        <span class="dt">Why</span><span>The assistant answers from the company's own training material, which means that material has to exist, be structured and be ingestible before the assistant has anything to answer from. Building the bot first would have meant demoing it against nothing. The academy wasn't just the first deliverable, it was the dependency the assistant stood on.</span>
+        <span class="dt">Then</span><span>Job tracking followed once technicians had a reason to be in the app daily. The ServiceMonster integration went last: the only piece dependent on a system outside the team's control, so it carried the highest schedule risk and the least coupling. Sequencing it last kept an external dependency off the critical path.</span>
+      </div>
+    </div>
+
+    <div class="dec rv">
+      <h3>Ship a mobile web client, not a native app</h3>
+      <div class="dl">
+        <span class="dt">The call</span><span>Build the technician client as a mobile optimised web app rather than native iOS and Android.</span>
+        <span class="dt">Why</span><span>The fastest route to something the client could put in a technician's hands and react to. A testable build in weeks meant real feedback shaping the product while there was still time to act on it, instead of a longer native build delivering its first honest feedback after the MVP window had closed.</span>
+        <span class="dt">Traded away</span><span>Native capabilities, including reliable offline use, and technicians work in mechanical rooms and basements without signal. Accepted for the MVP, on the basis that learning what the product needed to be mattered more than polish at that stage.</span>
+      </div>
+    </div>
+
+    <div class="dec rv">
+      <h3>Integrate ServiceMonster rather than rebuild scheduling</h3>
+      <div class="dl">
+        <span class="dt">The call</span><span>Pull scheduling, dispatch and job data from ServiceMonster instead of building a scheduling system inside Shield.</span>
+        <span class="dt">Why</span><span>The client's live business already ran on it. Their jobs, routes and truck assignments existed there and would keep existing there. A parallel system would have meant double entry and two versions of the truth. The only way Shield could show real job progress was to read from the system where real jobs already lived.</span>
+        <span class="dt">Traded away</span><span>Control. The integration inherits ServiceMonster's data model, its limits and its downtime, and weekly synchronisation set the floor on how fresh the data could be.</span>
+      </div>
+    </div>
+
+    <div class="dec rv">
+      <h3>One technician role in the MVP, everything else written down as later</h3>
+      <div class="dl">
+        <span class="dt">The call</span><span>The MVP covered air duct cleaning technicians only: their procedures, tools, safety steps, and the full cleaning process end to end. Hiring assessments, onboarding automation, customer service coaching, quality-control review of job photos, supervisor and manager support, and CRM integration all went into a written future-scope section instead.</span>
+        <span class="dt">Why</span><span>The assistant's value comes from depth of correct procedure, not breadth of coverage. One role answered accurately is provable, and a technician can act on it on a roof. Five roles answered approximately is a demo that fails the first time someone relies on it.</span>
+        <span class="dt">Traded away</span><span>An MVP that sounds smaller than the client's ambition, which covered the whole company. Writing the deferred scope out in full is what made that acceptable: nothing was refused, it was sequenced, and the client could see exactly where their other ideas had gone.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <p class="snum rv">05</p>
+    <h2 class="rv">Results</h2>
+    <div class="res rv">
+      <div><p class="rn" data-to="8">0</p><p class="rl">sprints to MVP</p></div>
+      <div><p class="rn" data-to="2">0</p><p class="rl">months, inside a 6 week cycle</p></div>
+      <div><p class="rn" data-to="4">0</p><p class="rl">client goals, one product</p></div>
+      <div><p class="rn" data-to="16">0</p><p class="rl">service sectors covered</p></div>
+    </div>
+    <p class="rv" style="margin-top:26px">An owner who previously learned about a bad job through a callback can now see each step of each job as it is completed, from anywhere.</p>
+    <p class="note rv">Shield was at MVP stage, validated with 10 to 15 external testers before client handoff. These are delivery outcomes, not adoption numbers, and I'd rather say so than dress them up.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <p class="snum rv">06</p>
+    <h2 class="rv">What I'd do differently</h2>
+    <p class="lead rv">Understand the business first. <span class="hl">Propose the application second.</span></p>
+    <p class="rv">A client arrives describing what they want built, and it is easy to treat that description as the brief. Four goals arrived, so four goals got scoped. But a client is an expert in their own business and not in software, and what they ask for is their best guess at a solution, phrased in the only vocabulary available to them. Accepting it as the question means never testing whether it is the right question.</p>
+    <div class="dec rv">
+      <h3>What I'd change</h3>
+      <div class="dl">
+        <span class="dt">Next time</span><span>Spend the first weeks inside the business rather than inside the brief. Go out on jobs. Sit with the person fielding technician calls all day. Find out what actually causes a callback, and what a good technician does that a new one doesn't.</span>
+        <span class="dt">Why</span><span>An application is an answer. You can only judge whether it is a good one against a problem you understand independently of how the client described it. Everything I got right here came from the moment I stopped treating the brief as four features and started asking why the owner couldn't leave the roof.</span>
+        <span class="dt">The tell</span><span>The strongest part of this project is the checklist: one mechanism that gives a technician guidance and an owner visibility at the same time. That didn't come from the brief. It came from understanding what the business actually needed. I'd rather find that in week one, by design, than partway through by instinct.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="nextnav">
+  <div class="wrap">
+    <a class="nx rv" href="case-metamed.html">
+      <span><p class="nxl">Next case</p><p class="nxt">Metamed</p></span><span class="nxt">→</span>
+    </a>
+  </div>
+</div>
+
+<div class="cur" id="cur"></div><div class="curdot" id="curdot"></div>
+<script src="case.js"></script>
+<script src="motion.js"></script>
+</body>
+</html>

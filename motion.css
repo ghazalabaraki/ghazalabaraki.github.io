@@ -1,0 +1,89 @@
+/* shared motion layer, loaded after each page's own styles */
+
+/* 01 marker stroke highlight */
+.hl{
+  background-image:linear-gradient(transparent 8%,var(--yellow) 8%,var(--yellow) 92%,transparent 92%);
+  background-repeat:no-repeat;
+  background-size:0% 100%;
+  padding:0 4px;border-radius:2px;
+  transition:background-size .75s cubic-bezier(.3,.7,.3,1);
+}
+.hl.on{background-size:100% 100%}
+
+/* 00 nav avatar */
+.mark{display:inline-flex;align-items:center;gap:9px}
+.mark-av{width:28px;height:28px;border-radius:50%;object-fit:cover;background:var(--gray);flex-shrink:0}
+
+/* 02 staged entrance
+   .kw must never set `display`, or it collapses flex/block containers it is applied to.
+   Only headline words need inline-block, so scope that to h1. */
+.kw{opacity:0;transform:translateY(26px);transition:opacity .6s cubic-bezier(.2,.8,.3,1),transform .6s cubic-bezier(.2,.8,.3,1)}
+.kw.on{opacity:1;transform:none}
+h1 .kw{display:inline-block}
+
+/* 03 page transition curtain */
+.pt{position:fixed;inset:0;background:var(--ink);z-index:999;transform:translateY(100%);pointer-events:none;
+    transition:transform .52s cubic-bezier(.65,0,.3,1)}
+.pt.cover{transform:translateY(0)}
+.pt.out{transform:translateY(-100%)}
+.pt.instant{transition:none}
+
+/* 04 scroll progress */
+.prog{position:fixed;top:0;left:0;height:2px;width:0;background:var(--blue);z-index:1000;transition:width .1s linear}
+
+/* 05 sticky section numbers */
+@media(min-width:761px){
+  section .wrap.narrow{
+    max-width:800px;
+    display:grid;grid-template-columns:64px minmax(0,1fr);gap:0 24px;
+  }
+  section .wrap.narrow > *{grid-column:2}
+  section .wrap.narrow > .snum{
+    grid-column:1;grid-row:1 / span 99;
+    position:sticky;top:92px;align-self:start;margin:0;
+  }
+}
+
+/* 06 nav hides on scroll down */
+nav{transition:transform .38s cubic-bezier(.4,0,.2,1)}
+nav.hide{transform:translateY(-100%)}
+
+/* 07 clip reveal on images */
+.clipr{clip-path:inset(0 0 100% 0);transition:clip-path .95s cubic-bezier(.6,0,.3,1)}
+.clipr.shown{clip-path:inset(0 0 0 0)}
+
+/* 08 typing caret */
+.caret{display:inline-block;width:2px;height:1em;background:var(--blue);vertical-align:-2px;margin-left:2px;animation:bl .9s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+
+@media(prefers-reduced-motion:reduce){
+  .hl{background-size:100% 100%}
+  .kw{opacity:1;transform:none}
+  .pt{display:none}
+  .clipr{clip-path:none}
+  nav{transition:none}
+  nav.hide{transform:none}
+  .caret{animation:none}
+}
+
+/* ============ 09 line mask reveal ============ */
+.ln{display:block;overflow:hidden}
+.li{display:block;transform:translateY(108%);transition:transform .85s cubic-bezier(.62,0,.18,1)}
+.ln.on .li{transform:none}
+
+/* ============ 11 marquee ============ */
+.marq{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0}
+.marq-in{display:flex;gap:0;width:max-content;animation:marq 38s linear infinite}
+.marq:hover .marq-in{animation-play-state:paused}
+.marq span{font-size:14px;color:var(--muted);white-space:nowrap;padding:0 22px;display:flex;align-items:center;gap:22px}
+.marq span::after{content:"";width:4px;height:4px;border-radius:50%;background:var(--line);flex-shrink:0}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ============ 12 chapter tint ============ */
+section:nth-of-type(even){background:#FBFBF9}
+
+@media(prefers-reduced-motion:reduce){
+  .li{transform:none}
+  .marq-in{animation:none}
+  .scrollcue i::after{animation:none}
+}
